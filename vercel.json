@@ -1,15 +1,10 @@
 {
-    "devCommand": "uvicorn backend:app --host 0.0.0.0 --port 3000",
-    "builds": [
-      {
-        "src": "backend.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "backend.py"
-      }
-    ]
-  }
+	"version": 2,
+	"public": false,
+	"builds": [{ "src": "app.py", "use": "@vercel/python" }],
+	"routes": [
+		{ "src": "/", "dest": "app.py" },
+		{ "src": "/docs", "dest": "app.py" },
+		{ "src": "/openapi.json", "dest": "app.py" }
+	]
+}
