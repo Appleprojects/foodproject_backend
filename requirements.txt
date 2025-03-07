@@ -2,4 +2,4 @@ fastapi
 numpy
 tensorflow
 uvicorn
-guvicorn
+gunicorn
